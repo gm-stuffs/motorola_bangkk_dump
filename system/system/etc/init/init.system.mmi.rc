@@ -1,0 +1,50 @@
+service setup_shutdown /system/bin/setup_shutdown.sh
+    class late_start
+    user system
+    oneshot
+
+service move_elabel_data /system/bin/move_elabel_data.sh
+    class late_start
+    user system
+    group system
+    oneshot
+
+#ufs FFU
+service ufs_ffu_device /system/bin/ufs_ffu_device.sh
+    user root
+    class core
+    oneshot
+    disabled
+
+on early-boot
+    write /proc/sys/kernel/poweroff_cmd "/system/bin/reboot -p"
+    write /proc/sys/kernel/core_pattern "/data/app_dump/%e_%p_%t.core.gz"
+
+#ufs FFU
+on post-fs
+    exec_start ufs_ffu_device
+
+on post-fs-data
+
+    # OTA Package directory
+    mkdir /data/misc_ne 0770 system cache
+    # Give system permission to dhcp
+    mkdir /data/misc/dhcp 0750 dhcp system
+
+    # directory to place factory regulatory data
+    mkdir /data/misc/elabel 0755 system system
+
+    # Store setup_shutdown.sh disabled flag
+    mkdir /data/misc/setupcheck 0755 system system
+
+on post-fs-data && property:ro.vendor.mot.base_buildid=*
+    setprop ro.build.version.base_os "${ro.product.brand}/${ro.product.name}/${ro.product.device}:${ro.build.version.release}/${ro.vendor.mot.base_buildid}:${ro.build.type}/${ro.build.tags}"
+
+on init && property:ro.boot.revision=*
+    setprop ro.boot.hardware.revision ${ro.boot.revision}
+
+on property:ro.carrier=*
+    setprop ro.oem.key1 ${ro.carrier}
+
+on property:ro.vendor.hw.frontcolor=*
+    setprop ro.boot.hardware.color ${ro.vendor.hw.frontcolor}
