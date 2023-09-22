@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+<!-- FOTA service must be  white-listed to always have internet access while
+in power save mode and datasaver mode, even if it isn't in the foreground. -->
+
+<!-- FOTA must always have network access for polling and downloading. -->
+    <allow-in-power-save package="com.motorola.android.fota" />
+    <allow-in-data-usage-save package="com.motorola.android.fota" />
+</config>

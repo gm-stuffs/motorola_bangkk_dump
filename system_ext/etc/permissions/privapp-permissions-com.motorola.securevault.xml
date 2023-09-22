@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<permissions>
+    <privapp-permissions package="com.motorola.securevault" >
+         <permission name="com.motorola.permission.SECURE_VAULT"/>
+    </privapp-permissions>
+</permissions>

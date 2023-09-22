@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<permissions>
+    <privapp-permissions package="com.motorola.paks">
+
+        <!-- Allow listing all users and adding user restrictions -->
+        <permission name="android.permission.MANAGE_USERS"/>
+
+        <!-- Get device IMEI -->
+        <permission name="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
+
+        <!-- Permission to allow PAKS to write on new persist file. -->
+        <permission name="com.motorola.permission.ACCESS_PRODUCT_PERSIST"/>
+
+        <!-- Required to allow the app installs an apk -->
+        <permission name="android.permission.INSTALL_PACKAGES"/>
+
+        <!-- Required to allow PAKS to delete an apk -->
+        <permission name="android.permission.DELETE_PACKAGES"/>
+
+        <!-- Required to allow PAKS to launch an application -->
+        <permission name="android.permission.START_ACTIVITIES_FROM_BACKGROUND"/>
+
+        <!-- Required to add PAKS as protected package -->
+        <permission name="android.permission.INTERACT_ACROSS_USERS"/>
+
+        <!-- Required to allow PAKS to change secure settings  -->
+        <permission name="com.motorola.permission.WRITE_SECURE_SETTINGS"/>
+    </privapp-permissions>
+</permissions>

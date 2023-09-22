@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+  ~ Copyright (C) 2021 Motorola Mobility, LLC.
+  ~ All Rights Reserved.
+  ~ Motorola Mobility Confidential Restricted.
+  -->
+
+<permissions>
+    <privapp-permissions package="com.motorola.bug2go">
+        <!-- Bug2Go privileged permissions -->
+        <!-- AOSP -->
+        <permission name="android.permission.BROADCAST_CLOSE_SYSTEM_DIALOGS" />
+        <permission name="android.permission.DIAGNOSTIC"/>
+        <permission name="android.permission.DUMP"/>
+        <permission name="android.permission.PACKAGE_USAGE_STATS"/>
+        <permission name="android.permission.READ_LOGS"/>
+        <permission name="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
+        <!-- Apps and services -->
+        <permission name="com.motorola.ccc.ota.Permissions.INTERACT_OTA_SERVICE"/>
+    </privapp-permissions>
+</permissions>

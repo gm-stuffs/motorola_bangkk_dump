@@ -1,0 +1,4 @@
+<permissions>
+   <library name="com.motorola.imager.V5"
+       file="/system_ext/framework/com.motorola.imager.V5.jar" />
+</permissions>

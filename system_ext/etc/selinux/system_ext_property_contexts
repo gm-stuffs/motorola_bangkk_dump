@@ -1,0 +1,358 @@
+#line 1 "device/qcom/sepolicy/generic/private/property_contexts"
+# Copyright (c) 2017, 2019, 2021 The Linux Foundation. All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#     * Redistributions of source code must retain the above copyright
+#       notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above
+#       copyright notice, this list of conditions and the following
+#       disclaimer in the documentation and/or other materials provided
+#       with the distribution.
+#     * Neither the name of The Linux Foundation nor the names of its
+#       contributors may be used to endorse or promote products derived
+#       from this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+# WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
+# ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+# BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+# WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+# OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+# IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+ro.vendor.qti.va_aosp.support       u:object_r:vendor_exported_system_prop:s0 exact bool
+ro.vendor.qti.va_odm.support       u:object_r:vendor_exported_odm_prop:s0 exact bool
+ro.vendor.perf.scroll_opt        u:object_r:vendor_exported_system_prop:s0 exact bool
+ro.vendor.perf.scroll_opt.heavy_app        u:object_r:vendor_exported_system_prop:s0 exact int
+ro.netflix.bsp_rev                         u:object_r:vendor_exported_system_prop:s0 exact string
+
+persist.vendor.dpm.                        u:object_r:vendor_persist_dpm_prop:s0
+persist.vendor.rcs.                        u:object_r:vendor_persist_rcs_prop:s0
+persist.vendor.tcmd.                       u:object_r:vendor_persist_tcm_prop:s0
+persist.vendor.btstack                     u:object_r:bluetooth_prop:s0
+persist.vendor.bluetooth.emailaccountcount u:object_r:bluetooth_prop:s0
+persist.vendor.bt.a2dp                     u:object_r:bluetooth_prop:s0
+persist.vendor.bt_logger.                  u:object_r:bluetooth_prop:s0
+persist.vendor.service.bt.                 u:object_r:bluetooth_prop:s0
+ro.vendor.btstack.                         u:object_r:bluetooth_prop:s0
+vendor.pts.                                u:object_r:bluetooth_prop:s0
+vendor.bt.pts.                             u:object_r:bluetooth_prop:s0
+vendor.bluetooth.                          u:object_r:bluetooth_prop:s0
+vendor.camera.aux.packagelist              u:object_r:vendor_persist_camera_prop:s0
+persist.vendor.camera.privapp.list         u:object_r:vendor_persist_camera_prop:s0
+
+#mm-parser
+vendor.mm.enable.qcom_parser       u:object_r:vendor_mm_parser_prop:s0
+vendor.qcom_parser.                u:object_r:vendor_mm_parser_prop:s0
+#mm-osal
+vendor.debug.mmosal.config         u:object_r:vendor_mm_osal_prop:s0
+
+#perf
+vendor.perf.workloadclassifier.enable      u:object_r:vendor_wlc_prop:s0
+persist.vendor.build.date.utc              u:object_r:vendor_wlc_prop:s0
+vendor.mpctl.init.complete                 u:object_r:vendor_wlc_public_prop:s0
+vendor.perf.framepacing.                   u:object_r:vendor_afp_prop:s0
+
+#mm-video
+persist.vendor.debug.av.logs.lvl          u:object_r:debug_prop:s0
+persist.vendor.debug.en.drpcrpt           u:object_r:vendor_mm_video_prop:s0
+persist.vendor.media.hls.                 u:object_r:vendor_mm_video_prop:s0
+persist.vendor.sys.media.rtp-ports        u:object_r:vendor_mm_video_prop:s0
+vendor.encoder.video.profile              u:object_r:vendor_mm_video_prop:s0
+vendor.sys.media.target.version           u:object_r:vendor_sys_video_prop:s0
+vendor.sys.video.disable.ubwc             u:object_r:vendor_sys_video_prop:s0
+vendor.sys.media.target.qssi              u:object_r:vendor_sys_video_prop:s0
+
+#Wifi Display
+vendor.wfdservice                         u:object_r:vendor_wfd_service_prop:s0
+persist.vendor.debug.wfd.wfdsvc           u:object_r:vendor_wfd_sys_debug_prop:s0
+persist.vendor.debug.wfdcdbg              u:object_r:vendor_wfd_sys_debug_prop:s0
+persist.vendor.debug.wfdcdbgv             u:object_r:vendor_wfd_sys_debug_prop:s0
+persist.vendor.sys.debug.mux.             u:object_r:vendor_wfd_sys_debug_prop:s0
+persist.vendor.sys.debug.rtp.             u:object_r:vendor_wfd_sys_debug_prop:s0
+persist.vendor.sys.debug.wfd.             u:object_r:vendor_wfd_sys_debug_prop:s0
+vendor.sys.debug.wfd.                     u:object_r:vendor_wfd_sys_debug_prop:s0
+persist.vendor.setWFDInfo.R2              u:object_r:vendor_wfd_sys_prop:s0
+
+# WIGIG
+persist.vendor.wigig.                      u:object_r:vendor_wigig_core_prop:s0
+persist.vendor.fst.                        u:object_r:vendor_fst_prop:s0
+persist.dpm.feature                        u:object_r:vendor_persist_dpm_prop:s0
+ctl.stop$dpmd                              u:object_r:ctl_dpmd_prop:s0
+ctl.stop$tcmd                              u:object_r:ctl_tcmd_prop:s0
+
+# Beluga
+ro.vendor.beluga.p                         u:object_r:vendor_exported_system_prop:s0
+ro.vendor.beluga.c                         u:object_r:vendor_exported_system_prop:s0
+ro.vendor.beluga.s                         u:object_r:vendor_exported_system_prop:s0
+ro.vendor.beluga.t                         u:object_r:vendor_exported_system_prop:s0
+
+#XRCB prop
+vendor.xrcb.                               u:object_r:vendor_xrcb_prop:s0
+
+# bootreceiver config props
+ro.vendor.bootreceiver.enable              u:object_r:vendor_bootreceiver_prop:s0 exact bool
+
+#Power Module
+ro.vendor.power.tuning.support             u:object_r:vendor_exported_system_prop:s0 exact bool
+#line 1 "motorola/security/sepolicy/system_ext/private/property_contexts"
+## NOTE: Contexts added in this file MUST start with a blank line as below.
+
+sys.cppreopt_oem        u:object_r:cppreopt_prop:s0
+
+ro.nfc.                 u:object_r:nfc_prop:s0
+
+ro.location.providers.allowed        u:object_r:system_prop:s0
+media.httplive.                      u:object_r:audio_prop:s0
+media.proxy.                         u:object_r:media_proxy_prop:s0
+
+# Facebook app partner id
+persist.app.facebook.partnerid    u:object_r:fb_partner_id_prop:s0
+
+# Enterprise edition
+persist.app.settings.enterprise_edition  u:object_r:enterprise_edition_prop:s0
+
+# Channel id
+persist.app.settings.channel_id  u:object_r:channel_id_prop:s0
+
+# Sub channel id
+persist.app.settings.sub_channel_id  u:object_r:channel_id_prop:s0
+
+# Spotify properties
+ro.csc.spotify.music.referrerid u:object_r:thirdparty_prop:s0
+ro.csc.spotify.music.partnerid u:object_r:thirdparty_prop:s0
+persist.app.spotify.music.partnerid u:object_r:thirdparty_persist_prop:s0
+persist.app.spotify.music.referrerid u:object_r:thirdparty_persist_prop:s0
+
+# Booking Properties
+ro.trackingId.booking u:object_r:thirdparty_prop:s0
+persist.app.booking.trackingid u:object_r:thirdparty_persist_prop:s0
+
+# property related to IMS debugging in moto system.img
+persist.dbg.show_ims_icon            u:object_r:ims_dbg_prop:s0
+persist.dbg.vce_avail_ovr            u:object_r:ims_dbg_prop:s0
+persist.dbg.volte_avail_ovr          u:object_r:ims_dbg_prop:s0
+persist.dbg.vt_avail_ovr             u:object_r:ims_dbg_prop:s0
+persist.dbg.wfc_avail_ovr            u:object_r:ims_dbg_prop:s0
+
+#Carrier persist properties
+persist.carrier                      u:object_r:carrier_prop:s0
+
+# Property for Remosaic/QCFA sensors
+ro.camera.cfa.packagelist    u:object_r:camera_cfa_prop:s0
+
+# Property for Camera app pinning
+pinner.pin_camera            u:object_r:system_prop:s0
+
+#persist omadm properties
+persist.omadm.operator. u:object_r:persist_omadm_prop:s0
+
+# cache publish status for RCS
+rcs.publish.status u:object_r:radio_prop:s0
+
+ro.mot.build.guid          u:object_r:moto_ota_prop:s0
+ro.mot.version.full        u:object_r:moto_ota_prop:s0
+
+ro.cdma.home.operator.     u:object_r:radio_prop:s0
+cdma.operator.numeric      u:object_r:radio_prop:s0
+
+# Framework properties
+fw.max_users            u:object_r:framework_prop:s0
+fw.show_multiuserui     u:object_r:framework_prop:s0
+persist.mot             u:object_r:moto_system_prop:s0
+ro.sys.adb_reset_protected u:object_r:system_prop:s0
+
+# Add property to disable adb for DF units
+persist.mot.dogfooding u:object_r:moto_df_prop:s0
+
+# Facebook partner id
+ro.facebook.partnerid   u:object_r:system_prop:s0
+
+# Orange brand1
+ro.product.brand1       u:object_r:system_prop:s0
+
+# GMS clientid shadow properties
+ro.mot.gms.clientidbase u:object_r:system_prop:s0
+
+# GMS Google News shadow property
+ro.mot.gms.rlz_ap_whitelist u:object_r:system_prop:s0
+
+# carrier riongtone shadow properties
+ro.mot.config.ringtone  u:object_r:system_prop:s0
+ro.mot.config.notification_sound u:object_r:system_prop:s0
+
+# Property for switch Boot Animation
+persist.switch.bootanimation     u:object_r:mot_bootanimation_prop:s0
+
+#Motorola popup sound feature
+ro.mot.popup_device              u:object_r:system_prop:s0
+persist.sys.popup_sound          u:object_r:system_prop:s0
+
+# Security properties related for vendor and system process to read
+ro.boot.hab.product u:object_r:bootloader_prop:s0 exact string
+ro.boot.hab.cid u:object_r:bootloader_prop:s0 exact int
+ro.boot.hab.csv u:object_r:bootloader_prop:s0 exact int
+ro.mot.hab.product u:object_r:bootloader_prop:s0 exact string
+ro.mot.hab.cid u:object_r:bootloader_prop:s0 exact int
+ro.mot.hab.csv u:object_r:bootloader_prop:s0 exact int
+ro.boot.secure_hardware u:object_r:bootloader_prop:s0 exact int
+ro.boot.updating u:object_r:bootloader_prop:s0 exact int
+partition.oem.verified u:object_r:verity_status_prop:s0 exact int
+## Allow mbm_spy, tcmd read from vendor
+ro.build.version.full u:object_r:build_prop:s0 exact string
+## Allow mbm_spy, read from vendor
+ro.build.artifacts u:object_r:build_prop:s0 exact string
+
+## Allow qcrild read moto customid properties
+ro.mot.build.customerid u:object_r:build_prop:s0 exact string
+
+# property related to IMS debugging, persist.dbg.allow_ims_off is AOSP property
+persist.dbg.allow_ims_off u:object_r:telephony_config_prop:s0 exact int
+#
+## Allow ims domain read Moto added ims properties
+persist.dbg.show_ims_icon u:object_r:telephony_config_prop:s0 exact int
+persist.dbg.vce_avail_ovr u:object_r:telephony_config_prop:s0 exact int
+
+# Allow Mot phonelock and policylocked props to read from vendor
+persist.sys.phonelock.mode u:object_r:exported_system_prop:s0 exact int
+persist.sys.usb.policylocked u:object_r:exported_system_prop:s0 exact int
+ro.sys.adb_reset_protected u:object_r:exported_system_prop:s0 exact int
+
+#Allow sys.tcmd_system.action prop to set in vendor_init
+sys.tcmd_system.action   u:object_r:exported_config_prop:s0 exact string
+#
+## Allow ro.build.shutdown_timeout prop to set in vendor_init
+ro.build.shutdown_timeout   u:object_r:build_config_prop:s0 exact int
+
+# Property relate to ringtone2 IKSWP-14860
+ro.config.ringtone_2  u:object_r:systemsound_config_prop:s0 exact string
+
+# P upgrades: camera mod system props are read from system and vendor
+camera.mot.rc_id            u:object_r:exported_system_prop:s0 exact int
+camera.mot.mod_id           u:object_r:exported_system_prop:s0 exact int
+
+# Allow camera HAL to access gsm.operator.xxx
+gsm.operator.numeric u:object_r:telephony_status_prop:s0 exact string
+
+# Allow camera interface to access ro.camera.xxx
+ro.camera.req.fmq.size u:object_r:camera_config_prop:s0 exact int
+ro.camera.res.fmq.size u:object_r:camera_config_prop:s0 exact int
+
+## Allow vendor init set the ro.build.sw_version and ro.build.tf_modelnumber
+ro.build.tf_modelnumber u:object_r:exported_default_prop:s0 exact string
+ro.build.sw_version     u:object_r:exported_default_prop:s0 exact string
+#
+## Property relate to Google News revenue share IKSWP-29257 and IKSWP-40470
+ro.com.google.rlz_ap_whitelist u:object_r:exported_config_prop:s0 exact string
+
+# Property for Led lighting
+persist.charge.led.lighting         u:object_r:exported_system_prop:s0 exact string
+
+# Property for camera
+camera.mot.is.coming.cts     u:object_r:exported_system_prop:s0 exact string
+camera.mot.is.coming.aosp    u:object_r:exported_system_prop:s0 exact string
+camera.mot.is.client.foreground    u:object_r:exported_system_prop:s0 exact string
+camera.mot.apps.value        u:object_r:exported_system_prop:s0 exact string
+camera.mot.apps.activity.value     u:object_r:exported_system_prop:s0 exact string
+camera.mot.is.logical.request      u:object_r:exported_system_prop:s0 exact string
+
+# Property for camera csid error check
+camera.mot.csid.error     u:object_r:moto_camera_csid_error_prop:s0 exact string
+
+# Property hardware soc manufacturer
+ro.hardware.soc.manufacturer u:object_r:soc_prop:s0 exact string
+
+# mot_bt_prop
+persist.mot_bt.    u:object_r:mot_bt_prop:s0
+
+# read bootanim state in autotest script
+init.svc.bootanim u:object_r:init_service_status_prop:s0 exact string
+
+# for reading system property by health@1.0-serv
+sys.mod.batterymode u:object_r:exported_system_prop:s0 exact int
+
+# only show PVT when hwid is PVT*
+ro.hardware.device.pvtui u:object_r:exported_default_prop:s0 exact string
+
+# export the ram size property
+ro.hardware.device.ram_size u:object_r:exported_default_prop:s0 exact string
+
+# Trigger to start WLAN driver logs service
+persist.wlan.debug_log  u:object_r:wlan_log_prop:s0
+
+# Moto Desktop feature
+mot.hdmi.audio_allow     u:object_r:mot_desktop_prop:s0
+mot.rdp.audio_output_activated     u:object_r:mot_desktop_prop:s0
+mot.audio.allow_recording_voip     u:object_r:mot_desktop_prop:s0
+persist.desktop.    u:object_r:mot_desktop_prop:s0
+ro.product.motodesktop u:object_r:build_prop:s0 exact int
+ro.product.readyfor.lite u:object_r:build_prop:s0 exact int
+
+# Label ro.setupwizard.require_network and ro.setupwizard.user_req_network
+# to allow to set these properties in init.mmi.carrier.sh
+ro.setupwizard.require_network u:object_r:carrier_prop:s0
+ro.setupwizard.user_req_network u:object_r:carrier_prop:s0
+
+# Zram writeback
+persist.sys.zram_wb_enabled     u:object_r:zram_control_prop:s0 exact bool
+persist.sys.zram_wb_size        u:object_r:zram_control_prop:s0 exact string
+
+# export is_prc to vendor
+ro.product.is_prc         u:object_r:build_prop:s0 exact bool
+
+# Allow vendor init set the ro.mot.enable_tmo_messaging_ps_feature and ro.mot.enable_att_messaging_ps_feature
+ro.mot.enable_tmo_messaging_ps_feature u:object_r:telephony_config_prop:s0 exact string
+ro.mot.enable_att_messaging_ps_feature u:object_r:telephony_config_prop:s0 exact string
+
+# Property for System fonts
+persist.sys.overlayfonts         u:object_r:exported_system_prop:s0 exact string
+
+# Properties for Lmkd
+ro.lmk.pgscan_limit             u:object_r:lmkd_config_prop:s0 exact int
+ro.lmk.file_low_percentage      u:object_r:lmkd_config_prop:s0 exact int
+ro.lmk.file_high_percentage     u:object_r:lmkd_config_prop:s0 exact int
+ro.lmk.threshold_decay          u:object_r:lmkd_config_prop:s0 exact int
+
+# Properties used for mmi_carrier to set demo mode and max charger temperature
+ro.sys.force_demo_mode           u:object_r:system_prop:s0
+ro.sys.force_max_chrg_temp       u:object_r:system_prop:s0
+
+# Property to check if it is a production build
+ro.product.is_production         u:object_r:system_prop:s0
+
+# Window rotation property for Speaker swap feature
+ro.audio.monitorWindowRotation  u:object_r:audio_config_prop:s0 exact bool
+
+# Property for camera
+persist.motocam.iscoming u:object_r:exported_system_prop:s0 exact int
+
+# Allow set ro.telephony.sim.count dynamicly
+ro.telephony.sim.count         u:object_r:telephony_config_prop:s0 exact int
+
+# RKP CSR indicator property
+ro.rkp.csr_uploaded                u:object_r:rkp_config_prop:s0 exact int
+
+# Graphics related properties
+persist.graphics.vulkan.     u:object_r:graphics_vulkan_prop:s0
+service.sf.present_timestamp     u:object_r:sf_present_timestamp_prop:s0
+
+# Audio Hi-res feature
+ro.audio.feature.hi_res.supported  u:object_r:audio_config_prop:s0 exact bool
+
+# mot_dm_prop
+persist.mot_dm.    u:object_r:mot_dm_prop:s0
+
+##NOTE: DO NOT change the last line, keep it as blank!.
+
+#line 1 "motorola/security/sepolicy/features/att/iqi/system_ext/private/property_contexts"
+
+# Property to check power-up reason
+ro.vendor.boot.powerup_reason      u:object_r:vendor_boot_powerup_reason_prop:s0
+#
+

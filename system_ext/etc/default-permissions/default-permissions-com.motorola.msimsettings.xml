@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<exceptions>
+    <exception package="com.motorola.msimsettings">
+        <permission name="android.permission.READ_CALL_LOG" fixed="false" />
+        <permission name="android.permission.READ_CONTACTS" fixed="false" />
+    </exception>
+</exceptions>
