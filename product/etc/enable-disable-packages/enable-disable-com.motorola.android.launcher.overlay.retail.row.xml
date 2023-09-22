@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+~ Copyright (C) 2021 Motorola Mobility LLC,
+~ All Rights Reserved.
+~ Motorola Mobility Confidential Restricted.
+-->
+<enable-disable-package>
+    <package-disable-enable-criteria package="com.motorola.android.launcher.overlay.retail.row" carrierBased="true" default_action="disable">
+        <criteria action="enable" channel="openmx"/>
+        <criteria action="enable" channel="retbr"/>
+        <criteria action="enable" channel="opencl"/>
+        <criteria action="enable" channel="openpe"/>
+        <criteria action="enable" channel="openla"/>
+        <criteria action="enable" channel="retgb"/>
+        <criteria action="enable" channel="reteu"/>
+        <criteria action="enable" channel="teleu"/>
+        <criteria action="enable" channel="eegb"/>
+        <criteria action="enable" channel="vfeu"/>
+        <criteria action="enable" channel="pluspl"/>
+        <criteria action="enable" channel="tefes"/>
+        <criteria action="enable" channel="teleu"/>
+    </package-disable-enable-criteria>
+</enable-disable-package>

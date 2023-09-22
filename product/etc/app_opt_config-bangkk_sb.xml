@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    App optimizations device config
+-->
+<app-optimization version="1">
+
+    <devconfig>
+        <!-- cpu profiles from low to high
+            SCHEDULER_BOOST = 0x40C00000,
+            MAX_FREQ_CLUSTER_BIG_CORE_0 = 0x40804000,
+            MAX_FREQ_CLUSTER_LITTLE_CORE_0 = 0x40804100,
+            MAX_FREQ_CLUSTER_PRIME_CORE_0 = 0x40804200,
+            MIN_FREQ_CLUSTER_BIG_CORE_0 = 0x40800000,
+            MIN_FREQ_CLUSTER_LITTLE_CORE_0 = 0x40800100,
+            MIN_FREQ_CLUSTER_PRIME_CORE_0 = 0x40800200
+        -->
+        <!-- boost profile -->
+        <profile name="boost1">0x40C00000, 0x1</profile>
+        <profile name="boost2">0x40C00000, 0x1, 0x40800000, 4095, 0x40800100, 4095, 0x40800200, 4095</profile>
+        <!-- hint profile -->
+        <profile name="hint100">0x42C28000, 0xFF, 0x40C00000, 0x2, 0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40800000, 0xFFF, 0x40800100, 0xFFF, 0x43010000, 0xFFFF, 0x40400000, 0x1, 0x42C10000, 0x1</profile>
+    </devconfig>
+
+    <!-- classified apps -->
+    <optimization name="base_app">
+        <supported-modes>video_mode, video_fullscreen_mode, camera_mode</supported-modes>
+        <default-rr>auto</default-rr>
+    </optimization>
+
+    <optimization name="rr_opt_app" parent="base_app">
+    </optimization>
+
+    <optimization name="rr_limit_app" parent="rr_opt_app">
+        <limit rr="90"/>
+    </optimization>
+
+    <optimization name="reading_app" parent="rr_opt_app">
+        <idle-fps>30</idle-fps>
+    </optimization>
+
+    <optimization name="navigation_app" parent="rr_opt_app">
+        <idle-fps>30</idle-fps>
+    </optimization>
+
+    <optimization name="rr_deep_opt_app" parent="rr_opt_app">
+        <min-fps>30</min-fps>
+    </optimization>
+
+    <optimization name="low_latency_app" parent="base_app">
+        <llm>true</llm>
+    </optimization>
+
+    <optimization name="normal_app" parent="base_app">
+    </optimization>
+
+    <optimization name="heavy_load_app">
+        <boost rr="120" profile="boost2"/>
+    </optimization>
+
+    <optimization name="heavy_load_lite_app">
+        <boost profile="boost1"/>
+    </optimization>
+
+    <!-- recognized in-app modes, will merge with app opt at runtime -->
+    <optimization name="video_mode">
+        <default-rr>auto</default-rr>
+    </optimization>
+
+    <optimization name="video_fullscreen_mode">
+        <default-rr>video</default-rr>
+    </optimization>
+
+    <optimization name="camera_mode">
+        <thermal>JPSB-camera</thermal>
+    </optimization>
+
+    <!-- global modes -->
+    <!-- limit rr to 90 if battery low (<20%), only for normal apps -->
+    <optimization name="battery_low_mode">
+        <limit rr="90" />
+    </optimization>
+
+    <optimization name="voice_call_mode">
+        <thermal>JPSB-voicecall</thermal>
+    </optimization>
+
+    <!-- apps NOT applicable for autoRR  -->
+    <optimization name="com.google.android.apps.restore"/>
+    <optimization name="com.google.android.dialer"/>
+    <optimization name="com.motorola.launcher3"/>
+    <optimization name="android.view.cts"/>
+    <optimization name="com.google.android.calculator"/>
+    <optimization name="com.android.cts.graphics.framerateoverride"/>
+
+</app-optimization>

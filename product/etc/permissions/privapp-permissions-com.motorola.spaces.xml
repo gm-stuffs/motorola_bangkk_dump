@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<permissions>
+    <privapp-permissions package="com.motorola.spaces">
+        <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
+        <permission name="com.motorola.permission.WRITE_SECURE_SETTINGS"/>
+        <permission name="android.permission.MODIFY_DAY_NIGHT_MODE"/>
+        <permission name="android.permission.MANAGE_USERS"/>
+    </privapp-permissions>
+</permissions>

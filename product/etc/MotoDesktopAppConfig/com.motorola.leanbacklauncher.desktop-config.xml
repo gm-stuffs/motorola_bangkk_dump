@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<moto-desktop-app-config>
+    <package
+        packageName="com.motorola.leanbacklauncher"
+        destroyWhenDisplayRemoved="true"/>
+
+    <component
+        componentName="com.motorola.leanbacklauncher/com.motorola.leanbacklauncher.ui.DesktopModeLauncherActivity"
+        forceWindowMode="fullscreen" />
+
+    <component
+        componentName="com.motorola.leanbacklauncher/com.motorola.leanbacklauncher.ui.DesktopModeLauncherActivityGame"
+        forceWindowMode="fullscreen" />
+
+    <component
+        componentName="com.motorola.leanbacklauncher/com.motorola.leanbacklauncher.ui.HelpActivity"
+        forceWindowMode="fullscreen" />
+
+    <component
+        componentName="com.motorola.leanbacklauncher/com.motorola.leanbacklauncher.ui.manage.ManageAppActivity"
+        forceWindowMode="fullscreen" />
+
+    <component
+        componentName="com.motorola.leanbacklauncher/com.motorola.leanbacklauncher.ui.SettingsActivity"
+        forceWindowMode="fullscreen" />
+
+    <component
+        componentName="com.motorola.leanbacklauncher/com.motorola.leanbacklauncher.ui.manage.contacts.ManageContactsActivity"
+        forceWindowMode="fullscreen" />
+
+    <component
+        componentName="com.motorola.leanbacklauncher/com.motorola.leanbacklauncher.ui.CustomTabActivity"
+        forceWindowMode="fullscreen" />
+
+	<component
+        componentName="com.motorola.leanbacklauncher/com.motorola.leanbacklauncher.ui.FirstApplaunchActivity"
+        forceWindowMode="fullscreen" />
+
+	<component
+        componentName="com.motorola.leanbacklauncher/com.motorola.leanbacklauncher.ui.PermissionActivity"
+        forceWindowMode="fullscreen" />
+
+</moto-desktop-app-config>

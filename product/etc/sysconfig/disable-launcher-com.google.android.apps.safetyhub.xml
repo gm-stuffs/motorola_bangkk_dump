@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ **
+ * Copyright (C) 2022 Motorola Mobility, Inc.
+ * All Rights Reserved
+ *
+ * The contents of this file are Motorola Confidential Restricted (MCR).
+ *
+-->
+<config>
+    <component-override package="com.google.android.apps.safetyhub">
+        <component
+            class="com.google.android.apps.safetyhub.LauncherActivity"
+            enabled="false" />
+    </component-override>
+</config>

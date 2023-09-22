@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Game optimizations common config
+-->
+<game-optimization version="1">
+
+    <optimization name="com.tencent.tmgp.sgame" refs="120fps_game" />
+    <optimization name="com.tencent.tmgp.sgamece" refs="120fps_game" />
+    <optimization name="com.tencent.lolm" refs="90fps_game" />
+    <optimization name="com.tencent.tmgp.pubgmhd" refs="90fps_game" />
+    <optimization name="com.tencent.KiHan" refs="90fps_game" />
+    <optimization name="com.tencent.tmgp.cf" refs="120fps_game" />
+    <optimization name="com.pwrd.xxajh.lenovo" refs="120fps_game" />
+    <optimization name="com.pwrd.xsmdl.lenovo" refs="120fps_game" />
+    <optimization name="com.tencent.tmgp.WePop" refs="120fps_game" />
+    <optimization name="com.tencent.jkchess" refs="120fps_game" />
+
+    <optimization name="com.tencent.tmgp.cod" refs="120fps_game" />
+    <optimization name="com.tencent.af" refs="120fps_game" />
+    <optimization name="com.tencent.tmgp.speedmobile" refs="120fps_game" />
+    <optimization name="cc.thedream.qinsmoon.lenovo" refs="120fps_game" />
+    <optimization name="com.tencent.YiRen" refs="120fps_game" />
+    <optimization name="com.tencent.wmsj" refs="120fps_game" />
+    <optimization name="com.denachina.g13002010.lenovo" refs="90fps_game" />
+    <optimization name="com.netease.hyxd.lenovo" refs="120fps_game" />
+
+    <optimization name="com.netease.mc.lenovo" refs="120fps_game" />
+    <optimization name="com.wepie.snakegame.lenovo" refs="120fps_game" />
+    <optimization name="com.kiloo.subwaysurf" refs="120fps_game" />
+    <optimization name="cn.jj" refs="120fps_game" />
+    <optimization name="com.imangi.templerun2" refs="120fps_game" />
+    <optimization name="com.mfp.jelly.lenovo" refs="120fps_game" />
+    <optimization name="com.tencent.fifamobile" refs="120fps_game" />
+    <optimization name="com.ztgame.bob" refs="120fps_game" />
+    <optimization name="tile.master.connect.matching.game.ylgy.gzgw5c" refs="120fps_game" />
+    <optimization name="com.vectorunit.redcmgeplaycn" refs="120fps_game" />
+
+    <optimization name="com.dw.h5yvzr.yt" refs="90fps_heavy_game" />
+    <optimization name="com.hottagames.hotta.lenovo" refs="90fps_heavy_game" />
+    <optimization name="com.pwrd.hotta.laohu" refs="90fps_heavy_game" />
+
+    <optimization name="com.popcap.pvz2cthdlx" refs="60fps_game" />
+    <optimization name="com.minitech.miniworld.TMobile.Lenovo" refs="60fps_game" />
+    <optimization name="com.outfit7.talkingtomgoldrun.lenovo" refs="60fps_game" />
+    <optimization name="com.netease.dwrg.lenovo" refs="60fps_game" />
+    <optimization name="com.happyelements.AndroidAnimal" refs="60fps_game" />
+    <optimization name="com.netease.onmyoji.lenovo" refs="60fps_game" />
+    <optimization name="com.netease.my.lenovo" refs="60fps_game" />
+    <optimization name="com.aligames.kuang.kybc.lenovo" refs="60fps_game" />
+    <optimization name="com.nd.he.lenovo" refs="60fps_game" />
+    <optimization name="com.miHoYo.Yuanshen" refs="60fps_restricted_game" />
+    <optimization name="com.miHoYo.GenshinImpact" refs="60fps_restricted_game" />
+    <optimization name="com.miHoYo.ys.bilibili" refs="60fps_restricted_game" />
+    <optimization name="com.protopop.brightridge" refs="60fps_restricted_game" />
+
+    <optimization name="com.tencent.ig" refs="90fps_game" />
+    <optimization name="com.nianticlabs.pokemongo" refs="120fps_game" />
+    <optimization name="com.mojang.minecraftpe" refs="120fps_game" />
+    <optimization name="com.supercell.brawlstars" refs="120fps_game" />
+    <optimization name="jp.konami.duellinks" refs="120fps_game" />
+    <optimization name="com.com2us.smon.normal.freefull.google.kr.android.common" refs="120fps_game" />
+    <optimization name="com.ngame.allstar.eu" refs="120fps_game" />
+    <optimization name="com.lilithgame.roc.gp" refs="120fps_game" />
+    <optimization name="com.bandainamcoent.dblegends_ww" refs="120fps_game" />
+    <optimization name="com.wb.goog.mkx" refs="120fps_game" />
+    <optimization name="com.studiowildcard.wardrumstudios.ark" refs="120fps_game" />
+    <optimization name="com.youmusic.magictiles" refs="120fps_game" />
+    <optimization name="com.ea.game.simcitymobile_row" refs="120fps_game" />
+    <optimization name="com.ea.game.nfs14_row" refs="120fps_game" />
+    <optimization name="com.foxnextgames.m3" refs="120fps_game" />
+    <optimization name="com.pixel.gun3d" refs="120fps_game" />
+    <optimization name="com.netmarble.mherosgb" refs="120fps_game" />
+    <optimization name="com.vectorunit.purple.googleplay" refs="120fps_game" />
+
+    <optimization name="com.dts.freefireth" refs="60fps_heavy_game" />
+    <optimization name="com.roblox.client" refs="60fps_game" />
+    <optimization name="com.king.candycrushsaga" refs="60fps_game" />
+    <optimization name="com.activision.callofduty.shooter" refs="60fps_heavy_game" />
+    <optimization name="com.supercell.clashroyale" refs="60fps_game" />
+    <optimization name="com.king.candycrushsodasaga" refs="60fps_game" />
+    <optimization name="com.pubg.imobile" refs="60fps_game" />
+
+</game-optimization>

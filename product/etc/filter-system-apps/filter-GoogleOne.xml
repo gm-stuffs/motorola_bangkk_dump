@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<filter-system-apps>
+    <module name="GoogleOne" action="disable" prop="ro.carrier" value="amxmx;amxcl;amxco;amxla;amxpe;amxar;amvbr;tracfone;att;attpre;cricket;comcast;vzw"/>
+</filter-system-apps>
+

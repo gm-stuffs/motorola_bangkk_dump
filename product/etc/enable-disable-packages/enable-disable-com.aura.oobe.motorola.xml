@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<enable-disable-package>
+    <package-disable-enable-criteria package="com.aura.oobe.motorola" default_action="disable">
+        <criteria action="enable" channel="retla;retar;retbr;retcl;openmx;retpe" />
+        <criteria action="enable" channel="reteu;retgb;retmea;retru;teleu" />
+        <criteria action="enable" channel="retca;retus" />
+        <criteria action="enable" channel="retapac;retid;retjp;retkr;retsea" />
+    </package-disable-enable-criteria>
+</enable-disable-package>

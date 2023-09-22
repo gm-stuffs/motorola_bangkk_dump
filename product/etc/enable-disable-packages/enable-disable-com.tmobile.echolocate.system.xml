@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<enable-disable-package>
+    <package-disable-enable-criteria package="com.tmobile.echolocate.system" carrierBased="true" default_action="disable">
+        <criteria action="enable" channel="tmo" mccmnc="310240" gid="544D"/>
+        <criteria action="enable" channel="tmo" mccmnc="310260" gid="544D"/>
+        <criteria action="enable" channel="tmo" mccmnc="310160" gid="544D"/>
+        <criteria action="enable" channel="tmo" mccmnc="310200" gid="544D"/>
+        <criteria action="enable" channel="tmo" mccmnc="310210" gid="544D"/>
+        <criteria action="enable" channel="tmo" mccmnc="310220" gid="544D"/>
+        <criteria action="enable" channel="tmo" mccmnc="310230" gid="544D"/>
+        <criteria action="enable" channel="tmo" mccmnc="310250" gid="544D"/>
+        <criteria action="enable" channel="tmo" mccmnc="310270" gid="544D"/>
+        <criteria action="enable" channel="tmo" mccmnc="310310" gid="544D"/>
+        <criteria action="enable" channel="tmo" mccmnc="310490" gid="544D"/>
+        <criteria action="enable" channel="tmo" mccmnc="310660" gid="544D"/>
+        <criteria action="enable" channel="tmo" mccmnc="310800" gid="544D"/>
+        <criteria action="enable" channel="tmo" mccmnc="311660" gid="544D"/>
+        <criteria action="enable" channel="tmo" mccmnc="311882" gid="544D"/>
+        <criteria action="enable" channel="tmo" mccmnc="312250" gid="544D"/>
+        <criteria action="enable" channel="tmo" mccmnc="00101" gid="544D"/>
+    </package-disable-enable-criteria>
+</enable-disable-package>

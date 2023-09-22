@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<enable-disable-package>
+    <package-disable-enable-criteria package="com.dti.motorola" default_action="disable">
+        <criteria action="enable" channel="retca;retus" />
+        <criteria action="enable" channel="opencl;openla;openpe" />
+        <criteria action="enable" channel="attmx;perar;niipe;oibr;timbr;avaco;altmx" />
+        <criteria action="enable" channel="tefar;tefbr;tefcl;tefco;tefla;tefmx;tefpe" />
+        <criteria action="enable" channel="tigca;tigco" />
+        <criteria action="enable" channel="retar;retbr;retcl;retla;openmx;retpe" />
+        <criteria action="enable" channel="retgb;reteu;retmea;retru;teleu" />
+        <criteria action="enable" channel="o2gb;o2de;tescogb;tescoie;tefes" />
+        <criteria action="enable" channel="bouyfr;eegb;yoigo;vfeu;3gb;3ie;timit;windit;telhu;oraeu;dteu;dtpl;pluspl;altice;vipeu;veoneu" />
+        <criteria action="enable" channel="retapac;retid;retin;retjio;retjp;retkr;retsea" />
+        <criteria action="enable" channel="telstra;vfau;optus;amzin;jioin;airin;gt4gtw;trueth;smarthk;mobilpk;softbank;ymobile;lguplus" />
+
+    </package-disable-enable-criteria>
+</enable-disable-package>

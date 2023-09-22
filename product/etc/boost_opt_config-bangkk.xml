@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+/* Copyright (c) 2017-2020 Qualcomm Technologies, Inc.
+ * All Rights Reserved.
+ * Confidential and Proprietary - Qualcomm Technologies, Inc.
+ */
+-->
+
+<!--Ids are used in identifying the boosts, increment ids linearly,
+    do not modify Ids, or add in between-->
+<!--follow the number format rules while specifying number, can be given
+    in any format-->
+
+<BoostConfigs version="1">
+        <scrollappcategories name="com.motorola.launcher3" category="103" />
+        <scrollappcategories name="com.amazon.avod.thirdpartyclient" category="102" />
+        <scrollappcategories name="com.google.android.apps.magazines" category="102" />
+        <scrollappcategories name="com.reddit.frontpage" category="102" />
+        <scrollappcategories name="com.facebook.katana" category="102" />
+        <scrollappcategories name="com.instagram.android" category="102" />
+        <scrollappcategories name="com.google.android.apps.youtube.music" category="102" />
+        <scrollappcategories name="com.twitter.android" category="102" />
+        <scrollappcategories name="org.telegram.messenger" category="102" />
+        <scrollappcategories name="com.facebook.orca" category="102" />
+
+        <!--Note:
+              1. fps: Need add config for all supported fps, fps please use int value.
+                    If not need to set fps, please set fps to -1 in BootOptConfig.java
+
+              2. hintname: default name was hintId_109, hintId_110, the hintIds are defined in com.motorola.perf.MotoPerfManager
+                            You can change the name in BootOptConfig.java-->
+    <PerfBoost>
+
+        <!--        heaviest scroll boost        -->
+
+        <!-- CPUBW_MIN_FREQ resource opcode, value-->
+        <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
+        <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value -->
+        <!-- SCHEDBOOST resource opcode, value-->
+        <Config
+            hintname="hintId_scrollBoost" fps="60" subType="205"
+            Resources="0x43010000, 79, 0x40800000, 2054, 0x40800100, 1708, 0x40C00000, 2"  />
+        <!-- CPUBW_MIN_FREQ resource opcode, value-->
+        <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
+        <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value -->
+        <!-- SCHEDBOOST resource opcode, value-->
+        <!-- SCHED_BUSY_HYSTERSIS_CPU_MASK resource opcode, value-->
+        <!-- LPM Bias resource opcode, value-->
+        <Config
+            hintname="hintId_scrollBoost" fps="90" subType="205"
+            Resources="0x43010000, 79, 0x40800000, 2054, 0x40800100, 1708, 0x40C00000, 2,
+                       0x40C74000, 0xC0, 0x40408000, 0x27"  />
+        <Config
+            hintname="hintId_scrollBoost" fps="120" subType="205"
+            Resources="0x43010000, 79, 0x40800000, 2208, 0x40800100, 1804, 0x40C00000, 2,
+                      0x40C74000, 0xC0, 0x40408000, 0x27"  />
+        <Config
+            hintname="hintId_scrollBoost" fps="144" subType="205"
+            Resources="0x43010000, 79, 0x40800000, 2208, 0x40800100, 1804, 0x40C00000, 2,
+                        0x40C74000, 0xC0, 0x40408000, 0x27"  />
+    </PerfBoost>
+</BoostConfigs>

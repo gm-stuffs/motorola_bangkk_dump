@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Game optimizations device config
+-->
+<game-optimization version="1">
+    <devconfig>
+        <thermal-sensor>back_temp</thermal-sensor>
+        <wifi-llm>true</wifi-llm>
+        <tgpa func="1,2,3,4,5,6,7,8" scene="1,2,3" >true</tgpa>
+        <!-- temperatures from low to high -->
+        <temp name="0" temp="0" tempClr="-10"/>
+        <temp name="37" temp="37" tempClr="35"/>
+        <temp name="38" temp="38" tempClr="36"/>
+        <temp name="39" temp="39" tempClr="37"/>
+        <temp name="40" temp="40" tempClr="38"/>
+        <temp name="41" temp="41" tempClr="39"/>
+        <temp name="42" temp="42" tempClr="40"/>
+        <temp name="43" temp="43" tempClr="41"/>
+        <temp name="44" temp="44" tempClr="42"/>
+        <temp name="45" temp="45" tempClr="43"/>
+        <temp name="46" temp="46" tempClr="44"/>
+        <temp name="47" temp="47" tempClr="46"/>
+        <temp name="48" temp="48" tempClr="47"/>
+        <temp name="49" temp="49" tempClr="48"/>
+        <temp name="50" temp="50" tempClr="49"/>
+        <temp name="51" temp="51" tempClr="50"/>
+        <temp name="52" temp="52" tempClr="51"/>
+        <temp name="53" temp="53" tempClr="52"/>
+        <temp name="54" temp="54" tempClr="53"/>
+        <temp name="55" temp="55" tempClr="54"/>
+        <temp name="56" temp="56" tempClr="55"/>
+        <temp name="57" temp="57" tempClr="56"/>
+        <temp name="58" temp="58" tempClr="57"/>
+        <temp name="59" temp="59" tempClr="58"/>
+        <temp name="60" temp="60" tempClr="59"/>
+        <!-- boost profile -->
+        <profile name="boost0">0x41000000, 0x2</profile>
+        <profile name="boost1">0x41000000, 0x2, 0x41000100, 0x6</profile>
+        <profile name="boost2">0x40C00000, 0x1</profile>
+        <profile name="boost3">0x40C00000, 0x1, 0x40800000, 1536, 0x40800100, 1478</profile>
+    </devconfig>
+
+    <!-- base game -->
+    <optimization name="base_game" mode="normal">
+        <default-rr>60</default-rr>
+        <thermal>game-normal</thermal>
+        <limit temp="40" rr="90"/>
+        <limit temp="42" rr="60"/>
+        <limit temp="44" rr="60" fps="45"/>
+        <limit temp="46" rr="60" fps="30"/>
+    </optimization>
+    <optimization name="base_game" mode="perf">
+        <default-rr>auto</default-rr>
+        <thermal>game-perf</thermal>
+        <limit temp="44" rr="90"/>
+        <limit temp="46" rr="60"/>
+        <limit temp="48" rr="90" fps="45"/>
+        <limit temp="50" rr="60" fps="30"/>
+        <boost profile="boost1"/>
+        <boost touch="1" framedrop="10" profile="boost2"/>
+    </optimization>
+    <optimization name="base_game" mode="powersave">
+        <battery-saver>true</battery-saver>
+        <default-rr>60</default-rr>
+        <thermal>game-normal</thermal>
+        <limit temp="0" rr="60"/>
+        <limit temp="44" rr="60" fps="30"/>
+    </optimization>
+
+    <!-- 60fps game -->
+    <optimization name="60fps_game" parent="base_game">
+        <default-rr>60</default-rr>
+    </optimization>
+    <optimization name="60fps_heavy_game" parent="60fps_game">
+    </optimization>
+    <!-- 90fps game -->
+    <optimization name="90fps_game" parent="base_game">
+        <default-rr>90</default-rr>
+    </optimization>
+    <optimization name="90fps_heavy_game" parent="90fps_game">
+    </optimization>
+    <!-- 120fps game -->
+    <optimization name="120fps_game" parent="base_game">
+        <default-rr>120</default-rr>
+    </optimization>
+    <optimization name="120fps_heavy_game" parent="120fps_game">
+    </optimization>
+    <!-- 144fps game -->
+    <optimization name="144fps_game" parent="base_game">
+        <default-rr>120</default-rr>
+    </optimization>
+    <optimization name="144fps_heavy_game" parent="144fps_game">
+    </optimization>
+
+    <!-- restricted game -->
+    <optimization name="60fps_restricted_game" parent="60fps_heavy_game">
+    </optimization>
+
+    <!-- other games -->
+    <optimization name="other_games" parent="base_game">
+    </optimization>
+
+    <optimization name="com.tencent.tmgp.sgame" refs="60fps_game" />
+    <optimization name="com.tencent.tmgp.sgamece" refs="60fps_game" />
+    <optimization name="com.tencent.tmgp.pubgmhd" refs="60fps_game" />
+    <optimization name="leofs.android.free" refs="60fps_game" />
+
+</game-optimization>

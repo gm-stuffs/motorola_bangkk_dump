@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<filter-system-apps>
+    <module name="MotorolaIgnite" action="enable" prop="ro.carrier" value="retca;retus;opencl;openla;openpe;attmx;perar;niipe;oibr;timbr;avaco;altmx;tefar;tefbr;tefcl;tefco;tefla;tefmx;tefpe;tigca;tigco;retar;retbr;retcl;retla;openmx;retpe;retgb;reteu;retmea;retru;teleu;o2gb;o2de;tescogb;tescoie;tefes;bouyfr;eegb;yoigo;vfeu;3gb;3ie;timit;windit;telhu;oraeu;dteu;dtpl;pluspl;altice;vipeu;veoneu;retapac;retid;retin;retjio;retjp;retkr;retsea;telstra;vfau;optus;amzin;jioin;airin;gt4gtw;trueth;smarthk;mobilpk;softbank;ymobile;lguplus" />
+</filter-system-apps>

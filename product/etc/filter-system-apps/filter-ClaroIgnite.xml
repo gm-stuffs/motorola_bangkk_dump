@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<filter-system-apps>
+    <module name="ClaroIgnite" action="enable" prop="ro.carrier" value="amxcl;amxco;amxpe;amxla;amxmx;amxbr;avaco;retbr"/>
+</filter-system-apps>

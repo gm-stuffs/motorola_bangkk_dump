@@ -1,0 +1,198 @@
+# Config Bluetooth aptX-adaptive/LHDC
+on boot
+    setprop persist.mot_bt.aptx_cert true
+    setprop persist.mot_bt.lhdc_enable true
+    #le batch scan threshold report disable
+    setprop persist.mot_bt.le_scan_batch_threshold_disable true
+    #le scan interval & window downgrade
+    setprop persist.mot_bt.le_scan_interval_downgrade true
+
+# Config low memory kill params
+on post-fs
+    setprop ro.lmk.file_low_percentage 30
+    setprop ro.lmk.file_high_percentage 70
+    setprop ro.lmk.pgscan_limit 3000
+    setprop ro.lmk.swap_free_low_percentage 10
+    setprop ro.lmk.swap_util_max 90
+    setprop ro.lmk.thrashing_limit 50
+    setprop ro.lmk.min_thrashing_limit 10
+    setprop ro.lmk.thrashing_limit_decay 25
+    setprop ro.lmk.thrashing_limit_critical 50
+    setprop ro.lmk.threshold_decay 50
+    setprop ro.lmk.filecache_min_kb 300000
+    setprop ro.lmk.stall_accelerated_decay 10
+    setprop ro.lmk.stall_accelerated_limit 40
+    # LMK 3.0
+    setprop ro.lmk.use_moto_strategy true
+    setprop ro.lmk.kswapd_limit 90
+    setprop ro.lmk.kswapd_limit_decay 20
+    setprop ro.lmk.freeze_min_adj 0
+    setprop ro.lmk.stall_limit_freeze 8
+    setprop ro.lmk.critical_min_adj 201
+    setprop ro.lmk.stall_limit_critical 6
+    setprop ro.lmk.medium_min_adj 920
+    setprop ro.lmk.psi_partial_stall_ms 50
+    setprop ro.lmk.psi_complete_stall_ms 150
+    setprop ro.lmk.kill_heaviest_task true
+    setprop ro.lmk.kill_timeout_ms 100
+    setprop ro.lmk.camera_boost 1
+    setprop ro.lmk.app_launch_boost 0
+    setprop ro.lmk.scroll_boost 0
+    setprop persist.lmk.debug true
+    #Dalvik configuration
+    setprop dalvik.vm.dex2oat-threads 4
+    setprop dalvik.vm.dex2oat-cpu-set 2,3,4,5
+    # App compactor
+    setprop ro.config.use_compaction true
+    setprop ro.config.compact_action_2 2
+    setprop ro.config.compact_bootcompleted true
+    # Zram
+    setprop ro.vendor.zram.product_swapon true
+    setprop ro.zram.mark_idle_delay_mins 60
+    setprop ro.zram.first_wb_delay_mins 1440
+    setprop ro.zram.periodic_wb_delay_hours 24
+    write /sys/block/zram0/comp_algorithm lz4
+    write /proc/sys/vm/swappiness 100
+    setprop sys.sysctl.swappiness 100
+    # LowMemoryDetector of Framework
+    setprop ro.lowmemdetector.psi_low_stall_us 50000
+    setprop ro.lowmemdetector.psi_medium_stall_us 150000
+    setprop ro.lowmemdetector.psi_high_stall_us 200000
+    setprop ro.config.use_freezer true
+    setprop ro.config.freezer_debounce_timeout 60000
+    # Enable Qcom perf framework
+    setprop persist.sys.perf_fwk_enabled true
+    # enable /system/bin/init.mmi.system_tuning.sh
+    setprop persist.sys.mmi_system_tuning true
+    # do not pin dex files
+    setprop ro.config.donot_pin_dex false
+
+    setprop ro.config.no_kill_duration_post_boot 0
+    # Promote recent UI procs
+    setprop persist.sys.aitune_promote_recent_ui_procs true
+    setprop persist.sys.aitune_promote_important_apps true
+    setprop persist.device_config.runtime_native.usap_pool_enabled false
+
+    setprop debug.sf.boost_sf_on_touch true
+    setprop persist.sys.touch_boost_enable true
+    setprop persist.sys.moto_boost_enabled true
+    #dex2pro
+    setprop persist.sys.dex2pro_enabled true
+    setprop persist.sys.dex2pro_art_version 331813010
+    #OverScroller
+    setprop ro.config.use_moto_scroller true
+
+    # max starting in bg, can be 1 in low ram device.
+    setprop ro.config.max_starting_bg 8
+    # use psi avg10 for mempressure in fwk to avoid ping-pong.
+    setprop ro.config.use_psi_avg10_for_mempressure true
+    # delay longer for service restart, will be rescheduled immediately once mempressure backing to normal.
+    setprop ro.config.svc_restart_delay_on_moderate_mem 3600000
+    setprop ro.config.svc_restart_delay_on_low_mem 3600000
+    setprop ro.config.svc_restart_delay_on_critical_mem 3600000
+
+#Reinit lmkd to reconfigure lmkd propertise
+on property:sys.boot_completed=1
+    setprop lmkd.reinit 1
+
+on property:sys.boot_completed=1
+    # Cpuset for boost
+    write /dev/cpuset/boost-app/cpus 6-7
+    # Cpuset for foreground apps
+    # do not change to 0-5, CTS failed on IKSWT-32275
+    write /dev/cpuset/foreground/cpus 0-6
+    write /dev/cpuset/background/cpus 0-1
+    write /dev/cpuset/restricted/cpus 0-3
+
+on property:ro.carrier="ymobile"
+    setprop persist.vendor.audio.calfile1 /vendor/etc/acdbdata_b/Bluetooth_cal.acdb
+    setprop persist.vendor.audio.calfile2 /vendor/etc/acdbdata_b/General_cal.acdb
+    setprop persist.vendor.audio.calfile3 /vendor/etc/acdbdata_b/Global_cal.acdb
+    setprop persist.vendor.audio.calfile4 /vendor/etc/acdbdata_b/Handset_cal.acdb
+    setprop persist.vendor.audio.calfile5 /vendor/etc/acdbdata_b/Hdmi_cal.acdb
+    setprop persist.vendor.audio.calfile6 /vendor/etc/acdbdata_b/Headset_cal.acdb
+    setprop persist.vendor.audio.calfile7 /vendor/etc/acdbdata_b/Speaker_cal.acdb
+
+on property:sys.boot_completed=1 && property:ro.vendor.zram.product_swapon=true
+    trigger sys-boot-completed-set
+
+on sys-boot-completed-set && property:persist.sys.zram_wb_enabled=false
+    swapon_all /vendor/etc/fstab.qcom
+on sys-boot-completed-set && property:persist.sys.zram_wb_enabled=true
+    swapon_all /vendor/etc/fstab_zramwriteback.qcom
+
+# Enable Zram writeback for 4~8G RAM on PRC
+on  post-fs && property:persist.sys.zram_wb_enabled="" && property:ro.product.is_prc=""
+    setprop persist.sys.zram_wb_enabled false
+on  post-fs && property:ro.vendor.hw.ram=4GB && property:persist.sys.zram_wb_enabled="" && property:ro.product.is_prc="true"
+    setprop persist.sys.zram_wb_enabled false
+on  post-fs && property:ro.vendor.hw.ram=6GB && property:persist.sys.zram_wb_enabled="" && property:ro.product.is_prc="true"
+    setprop persist.sys.zram_wb_enabled true
+on  post-fs && property:ro.vendor.hw.ram=8GB && property:persist.sys.zram_wb_enabled="" && property:ro.product.is_prc="true"
+    setprop persist.sys.zram_wb_enabled true
+on  post-fs && property:ro.vendor.hw.ram=12GB && property:persist.sys.zram_wb_enabled="" && property:ro.product.is_prc="true"
+    setprop persist.sys.zram_wb_enabled false
+# Set Zram writeback size for 4~12G RAM
+on  post-fs && property:ro.vendor.hw.ram=4GB && property:persist.sys.zram_wb_size=""
+    setprop persist.sys.zram_wb_size 1024M
+on  post-fs && property:ro.vendor.hw.ram=6GB && property:persist.sys.zram_wb_size=""
+    setprop persist.sys.zram_wb_size 1536M
+on  post-fs && property:ro.vendor.hw.ram=8GB && property:persist.sys.zram_wb_size="" && property:ro.product.is_prc=""
+    setprop persist.sys.zram_wb_size 2048M
+on  post-fs && property:ro.vendor.hw.ram=8GB && property:persist.sys.zram_wb_size="" && property:ro.product.is_prc="true"
+    setprop persist.sys.zram_wb_size 3072M
+on  post-fs && property:ro.vendor.hw.ram=12GB && property:persist.sys.zram_wb_size=""
+    setprop persist.sys.zram_wb_size 3072M
+
+# Tune Swap readahead on ufs
+# 0 when zram wb was disabled
+# 2 when zram wb was enabled, it should be fine tuned on each ufs/emmc.
+# Note: readahead will only be applied on writeback pages.
+on property:sys.boot_completed=1 && property:persist.sys.zram_wb_enabled=false
+    write /proc/sys/vm/page-cluster 0
+on property:sys.boot_completed=1 && property:persist.sys.zram_wb_enabled=true
+    write /proc/sys/vm/page-cluster 2
+
+on property:ro.product.cpu.abi=arm64-v8a
+    setprop dalvik.vm.dex2oat64.enabled true
+
+on  post-fs && property:ro.vendor.hw.ram=4GB
+    setprop dalvik.vm.heapstartsize 8m
+    setprop dalvik.vm.heapgrowthlimit 256m
+    setprop dalvik.vm.heapsize 512m
+    setprop dalvik.vm.heaptargetutilization 0.75
+    setprop dalvik.vm.heapminfree 512k
+    setprop dalvik.vm.heapmaxfree 8m
+    setprop ro.config.compact_action_1 2
+    setprop ro.MAX_HIDDEN_APPS 24
+    setprop ro.lmk.stall_limit_medium 0
+on  post-fs && property:ro.vendor.hw.ram=6GB
+    setprop dalvik.vm.heapstartsize 12m
+    setprop dalvik.vm.heapgrowthlimit 256m
+    setprop dalvik.vm.heapsize 512m
+    setprop dalvik.vm.heaptargetutilization 0.5
+    setprop dalvik.vm.heapminfree 6m
+    setprop dalvik.vm.heapmaxfree 24m
+    setprop ro.config.compact_action_1 4
+    setprop ro.MAX_HIDDEN_APPS 40
+    setprop ro.lmk.stall_limit_medium 1
+on  post-fs && property:ro.vendor.hw.ram=8GB
+    setprop dalvik.vm.heapstartsize 16m
+    setprop dalvik.vm.heapgrowthlimit 256m
+    setprop dalvik.vm.heapsize 512m
+    setprop dalvik.vm.heaptargetutilization 0.5
+    setprop dalvik.vm.heapminfree 8m
+    setprop dalvik.vm.heapmaxfree 32m
+    setprop ro.config.compact_action_1 4
+    setprop ro.MAX_HIDDEN_APPS 48
+    setprop ro.lmk.stall_limit_medium 1
+on  post-fs && property:ro.vendor.hw.ram=12GB
+    setprop dalvik.vm.heapstartsize 16m
+    setprop dalvik.vm.heapgrowthlimit 256m
+    setprop dalvik.vm.heapsize 512m
+    setprop dalvik.vm.heaptargetutilization 0.5
+    setprop dalvik.vm.heapminfree 8m
+    setprop dalvik.vm.heapmaxfree 32m
+    setprop ro.config.compact_action_1 4
+    setprop ro.MAX_HIDDEN_APPS 60
+    setprop ro.lmk.stall_limit_medium 1

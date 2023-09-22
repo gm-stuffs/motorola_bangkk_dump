@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<filter-system-apps>
+    <module name="MobileFeliCaClient" action="enable" prop="ro.vendor.hw.felica" value="true"/>
+</filter-system-apps>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Game optimizations device config
+-->
+<game-optimization version="1">
+
+    <devconfig>
+        <tgpa func="1,2,3,4,5,6,7,8" scene="1,2,3" >true</tgpa>
+        <!-- boost profile -->
+        <profile name="boost0">0x41000000, 0x2</profile>
+        <profile name="boost1">0x41000000, 0x2, 0x41000100, 0x6</profile>
+        <profile name="boost2">0x40C00000, 0x1</profile>
+        <profile name="boost3">0x40C00000, 0x1, 0x40800000, 1536, 0x40800100, 1478</profile>
+    </devconfig>
+
+    <!-- base game -->
+    <optimization name="base_game" mode="normal">
+        <default-rr>60</default-rr>
+        <thermal>JPSB-game-normal</thermal>
+        <llm>true</llm>
+    </optimization>
+    <optimization name="base_game" mode="perf">
+        <default-rr>auto</default-rr>
+        <thermal>JPSB-game-perf</thermal>
+        <llm>true</llm>
+        <boost profile="boost1"/>
+        <boost touch="1" framedrop="10" profile="boost2"/>
+    </optimization>
+    <optimization name="base_game" mode="powersave">
+        <battery-saver>true</battery-saver>
+        <default-rr>60</default-rr>
+        <thermal>JPSB-game-normal</thermal>
+        <llm>true</llm>
+    </optimization>
+
+    <!-- 60fps game -->
+    <optimization name="60fps_game" parent="base_game">
+        <default-rr>60</default-rr>
+    </optimization>
+    <optimization name="60fps_heavy_game" parent="60fps_game">
+    </optimization>
+    <!-- 90fps game -->
+    <optimization name="90fps_game" parent="base_game">
+        <default-rr>90</default-rr>
+    </optimization>
+    <optimization name="90fps_heavy_game" parent="90fps_game">
+    </optimization>
+    <!-- 120fps game -->
+    <optimization name="120fps_game" parent="base_game">
+        <default-rr>120</default-rr>
+    </optimization>
+    <optimization name="120fps_heavy_game" parent="120fps_game">
+    </optimization>
+    <!-- 144fps game -->
+    <optimization name="144fps_game" parent="base_game">
+        <default-rr>120</default-rr>
+    </optimization>
+    <optimization name="144fps_heavy_game" parent="144fps_game">
+    </optimization>
+
+    <!-- restricted game -->
+    <optimization name="60fps_restricted_game" parent="60fps_heavy_game">
+    </optimization>
+
+    <!-- other games -->
+    <optimization name="other_games" parent="base_game">
+    </optimization>
+
+    <optimization name="com.tencent.tmgp.sgame" refs="60fps_game" />
+    <optimization name="com.tencent.tmgp.sgamece" refs="60fps_game" />
+    <optimization name="com.tencent.tmgp.pubgmhd" refs="60fps_game" />
+    <optimization name="leofs.android.free" refs="60fps_game" />
+
+</game-optimization>

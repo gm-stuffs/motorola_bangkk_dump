@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    App optimizations common config
+-->
+<app-optimization version="1">
+
+    <optimization name="com.instagram.android" refs="rr_opt_app" />
+    <optimization name="com.facebook.katana" refs="rr_opt_app" />
+    <optimization name="com.sina.weibo" refs="rr_opt_app" />
+    <optimization name="com.baidu.minivideo" refs="rr_opt_app" />
+    <optimization name="com.ss.android.ugc.livelite" refs="rr_opt_app" />
+    <optimization name="com.ss.android.article.news" refs="rr_opt_app" />
+    <optimization name="com.yixia.videoeditor" refs="rr_opt_app" />
+    <optimization name="org.fungo.fungolive" refs="rr_opt_app" />
+    <optimization name="com.xingin.xhs" refs="rr_opt_app" />
+    <optimization name="com.facebook.lite" refs="rr_opt_app" />
+    <optimization name="com.twitter.android" refs="rr_opt_app" />
+    <optimization name="com.reddit.frontpage" refs="rr_opt_app" />
+    <optimization name="enterprises.dating.boo" refs="rr_opt_app" />
+    <optimization name="com.americasbestpics" refs="rr_opt_app" />
+    <optimization name="sg.bigo.live" refs="rr_opt_app" />
+    <optimization name="com.facebook.orca" refs="rr_opt_app" />
+    <optimization name="org.telegram.messenger" refs="rr_opt_app" />
+    <optimization name="com.tubitv" refs="rr_opt_app" />
+    <optimization name="tv.pluto.android" refs="rr_opt_app" />
+    <optimization name="com.playit.videoplayer" refs="rr_opt_app" />
+    <optimization name="com.univision.prendetv" refs="rr_opt_app" />
+    <optimization name="com.ubercab" refs="rr_opt_app" />
+    <optimization name="com.tranzmate" refs="rr_opt_app" />
+    <optimization name="me.lyft.android" refs="rr_opt_app" />
+    <optimization name="com.maps.voice.navigation.traffic.gps.location.route.driving.directions" refs="rr_opt_app" />
+    <optimization name="com.jvstudios.gpstracker" refs="rr_opt_app" />
+    <optimization name="com.google.android.apps.youtube.music" refs="rr_opt_app" />
+    <optimization name="com.duowan.kiwi" refs="rr_opt_app" />
+    <optimization name="air.tv.douyu.android" refs="rr_opt_app" />
+    <optimization name="com.achievo.vipshop" refs="rr_opt_app" />
+    <optimization name="com.tencent.qqmusic" refs="rr_opt_app" />
+    <optimization name="com.netease.cloudmusic" refs="rr_opt_app" />
+    <optimization name="cn.kuwo.player" refs="rr_opt_app" />
+    <optimization name="com.kugou.android" refs="rr_opt_app" />
+    <optimization name="com.spotify.music" refs="rr_opt_app" />
+
+    <optimization name="com.kmxs.reader" refs="reading_app" />
+    <optimization name="com.dragon.read" refs="reading_app" />
+    <optimization name="com.shuqi.controller" refs="reading_app" />
+    <optimization name="com.qq.reader" refs="reading_app" />
+    <optimization name="com.aikan" refs="reading_app" />
+    <optimization name="com.nd.android.pandareader" refs="reading_app" />
+    <optimization name="com.tencent.weread" refs="reading_app" />
+    <optimization name="com.ushaqi.zhuishushenqi" refs="reading_app" />
+    <optimization name="com.amazon.kindle" refs="reading_app" />
+    <optimization name="wp.wattpad" refs="reading_app" />
+
+    <optimization name="com.ss.android.ugc.aweme" refs="rr_deep_opt_app" />
+    <optimization name="com.zhiliaoapp.musically" refs="rr_deep_opt_app" />
+    <optimization name="com.smile.gifmaker" refs="rr_deep_opt_app" />
+    <optimization name="com.kuaishou.nebula" refs="rr_deep_opt_app" />
+    <optimization name="com.ss.android.ugc.aweme.lite" refs="rr_deep_opt_app" />
+    <optimization name="com.ss.android.ugc.trill" refs="rr_deep_opt_app" />
+    <optimization name="com.kwai.video" refs="rr_deep_opt_app" />
+    <optimization name="com.zhiliaoapp.musically.go" refs="rr_deep_opt_app" />
+
+    <optimization name="com.cctv.yangshipin.app.androidp" refs="rr_limit_app" />
+    <optimization name="com.sup.android.superb" refs="rr_limit_app" />
+    <optimization name="com.ss.android.article.video" refs="rr_limit_app" />
+    <optimization name="com.le123.ysdq" refs="rr_limit_app" />
+    <optimization name="com.baidu.haokan" refs="rr_limit_app" />
+    <optimization name="com.xfplay.play" refs="rr_limit_app" />
+    <optimization name="com.letv.android.client" refs="rr_limit_app" />
+    <optimization name="com.cibn.tv" refs="rr_limit_app" />
+    <optimization name="com.pplive.androidphone" refs="rr_limit_app" />
+    <optimization name="com.tudou.android" refs="rr_limit_app" />
+    <optimization name="com.funshion.video.mobile" refs="rr_limit_app" />
+    <optimization name="com.youku.phone" refs="rr_limit_app" />
+    <optimization name="com.tencent.qqlive" refs="rr_limit_app" />
+    <optimization name="tv.danmaku.bili" refs="rr_limit_app" />
+    <optimization name="com.qiyi.video" refs="rr_limit_app" />
+    <optimization name="com.hunantv.imgo.activity" refs="rr_limit_app" />
+    <optimization name="com.cmcc.cmvideo" refs="rr_limit_app" />
+    <optimization name="com.baidu.video" refs="rr_limit_app" />
+    <optimization name="cn.cntv" refs="rr_limit_app" />
+    <optimization name="com.storm.smart" refs="rr_limit_app" />
+    <optimization name="com.sohu.sohuvideo" refs="rr_limit_app" />
+    <optimization name="com.tencent.weishi" refs="rr_limit_app" />
+    <optimization name="dopool.player" refs="rr_limit_app" />
+    <optimization name="tv.pps.mobile" refs="rr_limit_app" />
+    <optimization name="com.meelive.ingkee" refs="rr_limit_app" />
+    <optimization name="com.meitu.meipaimv" refs="rr_limit_app" />
+    <optimization name="tv.yixia.bobo" refs="rr_limit_app" />
+    <optimization name="com.google.android.videos" refs="rr_limit_app" />
+    <optimization name="com.mxtech.videoplayer.ad" refs="rr_limit_app" />
+    <optimization name="org.videolan.vlc" refs="rr_limit_app" />
+    <optimization name="cast.video.screenmirroring.casttotv" refs="rr_limit_app" />
+    <optimization name="com.google.android.apps.youtube.kids" refs="rr_limit_app" />
+    <optimization name="com.google.android.youtube" refs="rr_limit_app" />
+    <optimization name="com.xunmeng.pinduoduo" refs="rr_limit_app" />
+    <optimization name="com.taobao.taobao" refs="rr_limit_app" />
+    <optimization name="com.jingdong.app.mall" refs="rr_limit_app" />
+    <optimization name="com.taobao.idlefish" refs="rr_limit_app" />
+    <optimization name="com.sankuai.meituan" refs="rr_limit_app" />
+    <optimization name="com.hexin.plat.android" refs="rr_limit_app" />
+    <optimization name="com.sankuai.meituan.dispatch.crowdsource" refs="rr_limit_app" />
+    <optimization name="com.eastmoney.android.berlin" refs="rr_limit_app" />
+    <optimization name="com.lalamove.huolala.driver" refs="rr_limit_app" />
+    <optimization name="com.taobao.litetao" refs="rr_limit_app" />
+    <optimization name="com.sankuai.meituan.dispatch.homebrew" refs="rr_limit_app" />
+
+    <optimization name="com.tencent.map" refs="navigation_app" />
+    <optimization name="com.baidu.BaiduMap" refs="navigation_app" />
+    <optimization name="com.autonavi.minimap" refs="navigation_app" />
+    <optimization name="com.google.android.apps.maps" refs="navigation_app" />
+    <optimization name="com.waze" refs="navigation_app" />
+
+    <optimization name="com.tencent.mm" refs="low_latency_app" />
+    <optimization name="com.microsoft.teams" refs="low_latency_app" />
+
+</app-optimization>
